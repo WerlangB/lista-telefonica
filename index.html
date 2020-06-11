@@ -2,10 +2,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="bootstrap/bootstrap.css" rel="stylesheet" type="text/css">
+    <title>Lista Telefonica</title>
     <script src="angular/angular.js"></script>
+    <script>
+        angular.module("listaTelefonica",[]);
+        angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function($scope){
+            $scope.app = "Lista Telefonica"
+        });
+    </script>
 </head>
-<body>
-    
+<body ng-controller="listaTelefonicaCtrl">
+    <div class="jumbotron">
+        <h4 ng-bind="app"></h4>
+    </div>
 </body>
 </html>
